@@ -12,7 +12,9 @@ const app = express();
 dbConnection();
 
 // CORS
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:4001'
+}));
 // rutas
 
 // directorio public
@@ -24,6 +26,10 @@ app.use( express.json() );
 
 app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
+
+app.get('*', (req, res) => {
+    res.sendFile( __dirname + '/public/index.html' );
+})
 
 
 
