@@ -13,7 +13,7 @@ dbConnection();
 
 // CORS
 app.use(cors({
-    origin: ['https://backend-calendar-f8q3.onrender.com/api/auth', 'https://backend-calendar-wyuy.onrender.com']
+    origin: '*'
 }));
 // rutas
 
