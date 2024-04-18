@@ -13,7 +13,7 @@ dbConnection();
 
 // CORS
 app.use(cors({
-    origin: 'http://localhost:4001'
+    origin: 'https://backend-calendar-f8q3.onrender.com'
 }));
 // rutas
 
