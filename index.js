@@ -12,9 +12,7 @@ const app = express();
 dbConnection();
 
 // CORS
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 // rutas
 
 // directorio public
