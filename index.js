@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express');
 const { dbConnection } = require('./database/config');
 const cors = require('cors');
@@ -29,6 +31,9 @@ app.get('*', (req, res) => {
     res.sendFile( __dirname + '/public/index.html' );
 })
 
+app.use('*', (req, resp) => {
+    res.sendFile( path.join(__dirname, 'public/index.html') )
+});
 
 
 
